@@ -12,10 +12,15 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @EqualsAndHashCode(of = "id")
 @Getter
-public class Job {
+public class SalonServices {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String descricao;
     private String preco;
+
+    public SalonServices(CreateSalonServiceRecord data) {
+        this.descricao = data.descricao();
+        this.preco = data.preco();
+    }
 }
