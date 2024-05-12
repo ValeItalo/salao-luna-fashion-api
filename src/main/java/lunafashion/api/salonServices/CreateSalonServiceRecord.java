@@ -1,4 +1,4 @@
-package lunafashion.api.job;
+package lunafashion.api.salonServices;
 
 import jakarta.validation.constraints.NotBlank;
 
